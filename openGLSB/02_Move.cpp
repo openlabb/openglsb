@@ -113,7 +113,7 @@ void RenderScene_MOVE(void)
   glutPostRedisplay(); // Redraw
 }
 
-void SpecialKeys(int key, int x, int y)
+void SpecialKeys_MOVE(int key, int x, int y)
 {
   GLfloat stepSize = 0.025f;
   GLfloat blockX = vVerts[0]; // Upper left X
@@ -155,7 +155,7 @@ void ChangeSize_MOVE(int w, int h)
 
 ///////////////////////////////////////////////////////////////////////////////
 // Main entry point for GLUT based programs
-int main(int argc, char* argv[])
+int main_Move(int argc, char* argv[])
 {
   gltSetWorkingDirectory(argv[0]);
   
@@ -174,7 +174,7 @@ int main(int argc, char* argv[])
   
   glutReshapeFunc(ChangeSize_MOVE);
   glutDisplayFunc(RenderScene_MOVE);
-  glutSpecialFunc(SpecialKeys);
+  glutSpecialFunc(SpecialKeys_MOVE);
   SetupRC_MOVE();
   
   glutMainLoop();

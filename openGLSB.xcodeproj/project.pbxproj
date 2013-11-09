@@ -11,6 +11,8 @@
 		AE0EE3DE182A5CF300D16AFE /* openGLSB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE0EE3D8182A5CF300D16AFE /* openGLSB-Info.plist */; };
 		AE0EE3DF182A5CF300D16AFE /* 02_Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE0EE3DA182A5CF300D16AFE /* 02_Move.cpp */; };
 		AE0EE3E0182A5CF300D16AFE /* 01_Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE0EE3DB182A5CF300D16AFE /* 01_Triangle.cpp */; };
+		AE1E0A72182E0AC20077E871 /* 04_Geotest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1E0A70182E0AC20077E871 /* 04_Geotest.cpp */; };
+		AE1E0A75182E4D9E0077E871 /* 03_Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1E0A73182E4D9E0077E871 /* 03_Primitives.cpp */; };
 		AE7CA1811828BCD2004032E1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7CA1801828BCD2004032E1 /* Cocoa.framework */; };
 		AE7CA1A01828BCD2004032E1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7CA19F1828BCD2004032E1 /* XCTest.framework */; };
 		AE7CA1A11828BCD2004032E1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7CA1801828BCD2004032E1 /* Cocoa.framework */; };
@@ -35,6 +37,8 @@
 		AE0EE3D9182A5CF300D16AFE /* openGLSB-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "openGLSB-Prefix.pch"; path = "openGLSB/openGLSB-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		AE0EE3DA182A5CF300D16AFE /* 02_Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = 02_Move.cpp; path = openGLSB/02_Move.cpp; sourceTree = SOURCE_ROOT; };
 		AE0EE3DB182A5CF300D16AFE /* 01_Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = 01_Triangle.cpp; path = openGLSB/01_Triangle.cpp; sourceTree = SOURCE_ROOT; };
+		AE1E0A70182E0AC20077E871 /* 04_Geotest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 04_Geotest.cpp; sourceTree = SOURCE_ROOT; };
+		AE1E0A73182E4D9E0077E871 /* 03_Primitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 03_Primitives.cpp; sourceTree = SOURCE_ROOT; };
 		AE7CA17D1828BCD2004032E1 /* openGLSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openGLSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7CA1801828BCD2004032E1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AE7CA1831828BCD2004032E1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -127,6 +131,8 @@
 			children = (
 				AE0EE3D8182A5CF300D16AFE /* openGLSB-Info.plist */,
 				AE0EE3D9182A5CF300D16AFE /* openGLSB-Prefix.pch */,
+				AE1E0A70182E0AC20077E871 /* 04_Geotest.cpp */,
+				AE1E0A73182E4D9E0077E871 /* 03_Primitives.cpp */,
 				AE0EE3DA182A5CF300D16AFE /* 02_Move.cpp */,
 				AE0EE3DB182A5CF300D16AFE /* 01_Triangle.cpp */,
 			);
@@ -230,6 +236,8 @@
 			files = (
 				AE0EE3DF182A5CF300D16AFE /* 02_Move.cpp in Sources */,
 				AE0EE3E0182A5CF300D16AFE /* 01_Triangle.cpp in Sources */,
+				AE1E0A75182E4D9E0077E871 /* 03_Primitives.cpp in Sources */,
+				AE1E0A72182E0AC20077E871 /* 04_Geotest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

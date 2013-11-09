@@ -15,23 +15,23 @@
 #define FREEGLUT_STATIC
 #endif
 
-GLBatch triangleBatch;
-GLShaderManager shaderManager;
+GLBatch triangleBatch_Triangle;
+GLShaderManager shaderManager_Triangle;
 
 //窗口大小改变时接受新的宽度和高度，其中0,0代表窗口中视口的左下角坐标，w，h代表像素
-void ChangeSize(int w,int h)
+void ChangeSize_Trangle(int w,int h)
 {
   glViewport(0, 0, w, h);
 }
 
 
 //为程序作一次性的设置
-void SetupRC()
+void SetupRC_Trangle()
 {
   //设置背影颜色
   glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
   //初始化着色管理器
-  shaderManager.InitializeStockShaders();
+  shaderManager_Triangle.InitializeStockShaders();
   //设置三角形，其中数组vVert包含所有3个顶点的x,y,笛卡尔坐标对。
   GLfloat vVerts[] = {
     -0.5f,0.0f,0.0f,
@@ -39,22 +39,22 @@ void SetupRC()
     0.0f,0.5f,0.0f,
   };
   //批次处理
-  triangleBatch.Begin(GL_TRIANGLES,3);
-  triangleBatch.CopyVertexData3f(vVerts);
-  triangleBatch.End();
+  triangleBatch_Triangle.Begin(GL_TRIANGLES,3);
+  triangleBatch_Triangle.CopyVertexData3f(vVerts);
+  triangleBatch_Triangle.End();
 }
 
 //开始渲染
-void RenderScene(void)
+void RenderScene_Trangle(void)
 {
   //清除一个或一组特定的缓冲区
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
   //设置一组浮点数来表示红色
   GLfloat vRed[] = {1.0f,0.0f,0.0f,1.0f};
   //传递到存储着色器，即GLT_SHADER_IDENTITY着色器，这个着色器只是使用指定颜色以默认笛卡尔坐标第在屏幕上渲染几何图形
-  shaderManager.UseStockShader(GLT_SHADER_IDENTITY,vRed);
+  shaderManager_Triangle.UseStockShader(GLT_SHADER_IDENTITY,vRed);
   //提交着色器
-  triangleBatch.Draw();
+  triangleBatch_Triangle.Draw();
   //将在后台缓冲区进行渲染，然后在结束时交换到前台
   glutSwapBuffers();
 }
@@ -63,7 +63,7 @@ void RenderScene(void)
 
 
 
-int kkmain(int argc,char* argv[])
+int main_Trangle(int argc,char* argv[])
 {
   //设置当前工作目录，针对MAC OS X
   gltSetWorkingDirectory(argv[0]);
@@ -76,8 +76,8 @@ int kkmain(int argc,char* argv[])
   glutInitWindowSize(800, 600);
   glutCreateWindow("Triangle");
   //注册回调函数
-  glutReshapeFunc(ChangeSize);
-  glutDisplayFunc(RenderScene);
+  glutReshapeFunc(ChangeSize_Trangle);
+  glutDisplayFunc(RenderScene_Trangle);
   //驱动程序的初始化中没有出现任何问题。
   GLenum err = glewInit();
   if (GLEW_OK != err) {
@@ -85,7 +85,7 @@ int kkmain(int argc,char* argv[])
     return 1;
   }
   //调用SetupRC
-  SetupRC();
+  SetupRC_Trangle();
   glutMainLoop();
   return 0;
 }
